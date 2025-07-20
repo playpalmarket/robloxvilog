@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top Up Robux (Via Login) | PlayPal Market</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1a1a1a;
+      --muted: #666;
+      --border: #dcdcdc;
+      --accent: #0D6EFD; /* Warna hover biru */
+      --font: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f7f7f8;
+      color: var(--fg);
+      font-family: var(--font);
+      font-size: 15px;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 15px 10px;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+
+    .section h2 {
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+      font-weight: 500;
+      color: var(--muted);
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 4px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px 12px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .item:hover {
+      box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .amount {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--fg);
+    }
+
+    .price {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .terms-box {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        padding: 20px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .terms-box ul {
+        padding-left: 20px;
+        margin: 0;
+    }
+
+    .terms-box li {
+        margin-bottom: 8px;
+    }
+
+    .terms-box li:last-child {
+        margin-bottom: 0;
+    }
+
+    footer {
+      padding: 20px 15px 40px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.4rem; }
+      .section h2 { font-size: 1rem; }
+      .grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+      .item { padding: 8px 10px; }
+      .amount { font-size: 0.9rem; }
+      .price { font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Roblox (Via Login)</h1>
+  </header>
+  
+  <section class="section">
+    <h2>Daftar Robux</h2>
+    <div class="grid">
+        <div class="item"><div class="amount">80 Robux</div><div class="price">Rp 18.700</div></div>
+        <div class="item"><div class="amount">160 Robux</div><div class="price">Rp 34.100</div></div>
+        <div class="item"><div class="amount">240 Robux</div><div class="price">Rp 48.400</div></div>
+        <div class="item"><div class="amount">320 Robux</div><div class="price">Rp 62.700</div></div>
+        <div class="item"><div class="amount">400 Robux</div><div class="price">Rp 74.250</div></div>
+        <div class="item"><div class="amount">800 Robux</div><div class="price">Rp 143.000</div></div>
+        <div class="item"><div class="amount">1.200 Robux</div><div class="price">Rp 291.500</div></div>
+        <div class="item"><div class="amount">4.500 Robux</div><div class="price">Rp 715.000</div></div>
+        <div class="item"><div class="amount">10.000 Robux</div><div class="price">Rp 1.430.000</div></div>
+        <div class="item"><div class="amount">22.500 Robux</div><div class="price">Rp 2.805.000</div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Catatan</h2>
+    <div class="terms-box">
+        <ul>
+            <li>Verifikasi 2 Langkah (V2L) wajib dimatikan untuk kelancaran proses.</li>
+            <li>Estimasi proses tergantung antrian yang sedang berjalan.</li>
+        </ul>
+    </div>
+  </section>
+
+  <footer>
+    PlayPal Market &copy; 2025
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const adminNumber = '6285877001999';
+      const items = document.querySelectorAll('.item');
+
+      items.forEach(item => {
+        item.addEventListener('click', function () {
+          const amountEl = this.querySelector('.amount');
+          if (!amountEl) return;
+
+          const productName = amountEl.textContent.trim();
+          
+          // Template pesan yang sudah diperbaiki untuk Roblox
+          const messageTemplate = `Login : (Google/FB/VK)\nEmail : \nPassword : \nPesanan Robux : ${productName}\n\nWajib Nonaktifkan V2L (Verifikasi 2 Langkah)`;
+
+          const encodedMessage = encodeURIComponent(messageTemplate);
+          const whatsappURL = `https://wa.me/${adminNumber}?text=${encodedMessage}`;
+
+          window.open(whatsappURL, '_blank');
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
