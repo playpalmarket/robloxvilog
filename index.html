@@ -1,142 +1,176 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roblox - Apple Premium Style ala ML Indonesia</title>
-<style>
-    :root {
-        --primary-color: #0d47a1; /* Biru gelap khas ML */
-        --accent-color: #1976d2;  /* Biru terang */
-        --bg-color: #f8f9fa;
-        --text-color: #212121;
-        --card-bg: #ffffff;
-        --shadow-color: rgba(0, 0, 0, 0.08);
-        --radius: 14px;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlayPal.ID</title>
+  <style>
     body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        background: var(--bg-color);
-        margin: 0;
-        color: var(--text-color);
-        line-height: 1.6;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      color: #333;
     }
     header {
-        background: var(--primary-color);
-        color: white;
-        padding: 18px 20px;
-        text-align: center;
-        font-size: 1.5rem;
-        font-weight: 600;
-        letter-spacing: 0.3px;
+      background: #fff;
+      padding: 15px;
+      text-align: center;
+      border-bottom: 2px solid #eee;
     }
-    .container {
-        max-width: 900px;
-        margin: auto;
-        padding: 20px;
+    header h1 {
+      margin: 0;
+      font-size: 22px;
     }
-    h2 {
-        margin-top: 28px;
-        font-size: 1.3rem;
-        font-weight: 600;
-        color: var(--accent-color);
-        border-bottom: 2px solid var(--accent-color);
-        padding-bottom: 5px;
+    .section {
+      padding: 15px;
+      background: #fff;
+      margin: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
-    .product-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 16px;
-        margin-top: 14px;
+    .section h2 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #222;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 5px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
     }
     .item {
-        background: var(--card-bg);
-        padding: 14px 16px;
-        border-radius: var(--radius);
-        box-shadow: 0 2px 8px var(--shadow-color);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        animation: fadeIn 0.4s ease forwards;
-        opacity: 0;
+      background: #fafafa;
+      padding: 10px;
+      border-radius: 6px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.2s;
+      border: 1px solid #ddd;
     }
-    .item:nth-child(1) { animation-delay: 0.05s; }
-    .item:nth-child(2) { animation-delay: 0.1s; }
-    .item:nth-child(3) { animation-delay: 0.15s; }
-    .item:nth-child(4) { animation-delay: 0.2s; }
-    @keyframes fadeIn {
-        to { opacity: 1; transform: translateY(0); }
-        from { opacity: 0; transform: translateY(10px); }
+    .item:hover {
+      background: #f0f0f0;
+      transform: translateY(-2px);
     }
-    .item strong {
-        font-size: 1rem;
-        color: var(--text-color);
-    }
-    .code {
-        font-size: 0.9rem;
-        color: #555;
-        background: #f1f1f1;
-        padding: 3px 7px;
-        border-radius: 6px;
-        display: inline-block;
-        margin: 6px 0;
+    .amount {
+      font-weight: bold;
+      font-size: 14px;
     }
     .price {
-        font-weight: 600;
-        color: var(--primary-color);
-        font-size: 1rem;
-        margin-top: auto;
+      color: #666;
+      font-size: 13px;
     }
-</style>
+    .note {
+      font-size: 13px;
+      background: #fef6e4;
+      padding: 10px;
+      border-radius: 6px;
+      color: #8a6d3b;
+      border: 1px solid #fcebcf;
+      line-height: 1.4em;
+    }
+  </style>
 </head>
 <body>
 
-<header>Roblox</header>
+<header>
+  <h1>PlayPal.ID</h1>
+</header>
 
-<div class="container">
-    <h2>Roblox Via Login</h2>
-    <div class="product-list">
-        <div class="item">
-            <strong>80 Robux</strong>
-            <div class="code">Kode: rob80</div>
-            <div class="price">Rp 18.700</div>
-        </div>
-        <div class="item">
-            <strong>160 Robux</strong>
-            <div class="code">Kode: rob160</div>
-            <div class="price">Rp 34.100</div>
-        </div>
-        <div class="item">
-            <strong>240 Robux</strong>
-            <div class="code">Kode: rob240</div>
-            <div class="price">Rp 48.400</div>
-        </div>
-        <div class="item">
-            <strong>320 Robux</strong>
-            <div class="code">Kode: rob320</div>
-            <div class="price">Rp 64.100</div>
-        </div>
-    </div>
+<!-- Section untuk ML -->
+<section class="section" data-title="Mobile Legends">
+  <h2>Mobile Legends</h2>
+  <div class="grid"></div>
+</section>
 
-    <h2>Roblox Gift Card</h2>
-    <div class="product-list">
-        <div class="item">
-            <strong>200 Robux</strong>
-            <div class="code">Kode: gift200</div>
-            <div class="price">Rp 45.000</div>
-        </div>
-        <div class="item">
-            <strong>400 Robux</strong>
-            <div class="code">Kode: gift400</div>
-            <div class="price">Rp 88.000</div>
-        </div>
-        <div class="item">
-            <strong>800 Robux</strong>
-            <div class="code">Kode: gift800</div>
-            <div class="price">Rp 170.000</div>
-        </div>
-    </div>
-</div>
+<section class="section" data-title="Catatan ML">
+  <h2>Catatan</h2>
+  <div class="note">
+    Pastikan ID dan server benar sebelum memesan. Proses tergantung antrian yang sedang berjalan.
+  </div>
+</section>
+
+<!-- Section untuk Roblox -->
+<section class="section" data-title="Roblox (Via Login)">
+  <h2>Roblox (Via Login)</h2>
+  <div class="grid"></div>
+</section>
+
+<section class="section" data-title="Catatan Roblox">
+  <h2>Catatan</h2>
+  <div class="note">
+    Verifikasi 2 Langkah (V2L) wajib dimatikan untuk kelancaran proses.<br>
+    Estimasi proses tergantung antrian yang sedang berjalan.
+  </div>
+</section>
+
+<script>
+  const adminNumber = "6285877001999";
+
+  const products = {
+    "Mobile Legends": [
+      { amount: "86 Diamonds", price: "Rp 20.000" },
+      { amount: "172 Diamonds", price: "Rp 40.000" },
+      { amount: "257 Diamonds", price: "Rp 60.000" }
+    ],
+    "Roblox (Via Login)": [
+      { amount: "80 Robux", price: "Rp 18.700" },
+      { amount: "160 Robux", price: "Rp 34.100" },
+      { amount: "240 Robux", price: "Rp 48.400" },
+      { amount: "320 Robux", price: "Rp 62.700" },
+      { amount: "400 Robux", price: "Rp 74.250" },
+      { amount: "800 Robux", price: "Rp 143.000" },
+      { amount: "1.200 Robux", price: "Rp 291.500" },
+      { amount: "4.500 Robux", price: "Rp 715.000" },
+      { amount: "10.000 Robux", price: "Rp 1.430.000" },
+      { amount: "22.500 Robux", price: "Rp 2.805.000" }
+    ]
+  };
+
+  function renderProducts() {
+    document.querySelectorAll('.section').forEach(section => {
+      const title = section.getAttribute('data-title');
+      if (products[title]) {
+        const grid = section.querySelector('.grid');
+        if (grid) {
+          products[title].forEach(p => {
+            const item = document.createElement('div');
+            item.className = 'item';
+            item.innerHTML = `
+              <div class="amount">${p.amount}</div>
+              <div class="price">${p.price}</div>
+            `;
+            grid.appendChild(item);
+          });
+        }
+      }
+    });
+  }
+
+  renderProducts();
+
+  document.body.addEventListener('click', (ev) => {
+    const item = ev.target.closest('.item');
+    if (!item) return;
+    const sectionTitle = item.closest('.section').getAttribute('data-title');
+    const productName = item.querySelector('.amount').textContent.trim();
+    const price = item.querySelector('.price').textContent.trim();
+
+    let messageTemplate = "";
+
+    if (sectionTitle === "Roblox (Via Login)") {
+      messageTemplate = `Login : (Google/FB/VK)\nEmail : \nPassword : \nPesanan Robux : ${productName} (${price})\n\nWajib Nonaktifkan V2L (Verifikasi 2 Langkah)`;
+    } else {
+      messageTemplate = `Pesanan ${sectionTitle} : ${productName} (${price})\n\nID : \nServer : `;
+    }
+
+    const url = `https://wa.me/${adminNumber}?text=${encodeURIComponent(messageTemplate)}`;
+    window.open(url, '_blank');
+  });
+</script>
 
 </body>
 </html>
