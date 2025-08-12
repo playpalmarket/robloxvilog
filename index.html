@@ -1,260 +1,142 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Top Up Robux (Via Login) | PlayPal Market</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roblox - Apple Premium Style ala ML Indonesia</title>
+<style>
     :root {
-      --bg: #ffffff;
-      --bg-soft: #F9FAFB;
-      --fg: #1F2937;
-      --muted: #6B7280;
-      --border: #E5E7EB;
-      --accent: #5C80BC;
-      --accent-light: rgba(92, 128, 188, 0.1);
-      --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        --primary-color: #0d47a1; /* Biru gelap khas ML */
+        --accent-color: #1976d2;  /* Biru terang */
+        --bg-color: #f8f9fa;
+        --text-color: #212121;
+        --card-bg: #ffffff;
+        --shadow-color: rgba(0, 0, 0, 0.08);
+        --radius: 14px;
     }
-
-    /* CSS Reset & General Styling */
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-
     body {
-      margin: 0;
-      padding: 0;
-      background: var(--bg-soft);
-      color: var(--fg);
-      font-family: var(--font-primary);
-      font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    /* Header */
-    header {
-      background-color: var(--accent);
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      color: #FFFFFF;
-      font-size: 2.25rem;
-      margin: 0;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    /* Section & Content Layout */
-    .section {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .section h2 {
-      font-size: 1.25rem;
-      margin-bottom: 24px;
-      font-weight: 600;
-      color: var(--fg);
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 12px;
-    }
-
-    /* Grid Layout for Items */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 16px;
-    }
-
-    /* Item Card Styling & Animation */
-    .item, .terms-box {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      
-      /* Initial state for animation */
-      opacity: 0;
-      transform: translateY(20px);
-      
-      /* Transisi yang cepat dan halus */
-      transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1), 
-                  box-shadow 0.25s cubic-bezier(0.25, 0.8, 0.25, 1),
-                  border-color 0.25s ease,
-                  opacity 0.4s ease-out,
-                  transform 0.4s ease-out;
-    }
-
-    .item {
-      padding: 16px;
-      text-align: left;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    
-    .item.is-visible, .terms-box.is-visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .item:hover {
-      transform: translateY(-5px);
-      border-color: var(--accent);
-      box-shadow: 0 10px 25px -5px var(--accent-light), 0 8px 10px -6px var(--accent-light);
-    }
-    
-    .item:active {
-        transform: translateY(-2px) scale(0.98);
-        box-shadow: 0 4px 10px -4px var(--accent-light);
-    }
-
-    .amount {
-      font-weight: 600;
-      font-size: 1rem;
-      color: var(--fg);
-    }
-
-    .price {
-      font-size: 0.875rem;
-      color: var(--muted);
-      font-weight: 500;
-      margin-top: 4px;
-    }
-
-    /* Terms Box Styling - UPDATED */
-    .terms-box {
-        padding: 24px; /* Padding seragam di semua sisi */
-        font-size: 0.95rem;
-        line-height: 1.7;
-        /* Garis biru di samping telah dihapus */
-    }
-    
-    .terms-box ul {
-        padding-left: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: var(--bg-color);
         margin: 0;
+        color: var(--text-color);
+        line-height: 1.6;
     }
-
-    .terms-box li {
-        margin-bottom: 10px;
+    header {
+        background: var(--primary-color);
+        color: white;
+        padding: 18px 20px;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 0.3px;
     }
-
-    .terms-box li:last-child {
-        margin-bottom: 0;
+    .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
     }
-
-    .terms-box strong {
-        color: var(--fg);
+    h2 {
+        margin-top: 28px;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--accent-color);
+        border-bottom: 2px solid var(--accent-color);
+        padding-bottom: 5px;
     }
-
-    /* Footer */
-    footer {
-      padding: 30px 20px 50px;
-      text-align: center;
-      font-size: 0.875rem;
-      color: #888;
-      line-height: 1.5;
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 16px;
+        margin-top: 14px;
     }
-
-    /* Responsive Design for Mobile */
-    @media (max-width: 480px) {
-      body { font-size: 15px; }
-      header { padding: 30px 20px; }
-      header h1 { font-size: 1.8rem; }
-      .section h2 { font-size: 1.1rem; }
-      .grid { 
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 12px;
-      }
-      .item { padding: 12px; border-radius: 10px;}
-      .amount { font-size: 0.9rem; }
-      .price { font-size: 0.85rem; }
+    .item {
+        background: var(--card-bg);
+        padding: 14px 16px;
+        border-radius: var(--radius);
+        box-shadow: 0 2px 8px var(--shadow-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        animation: fadeIn 0.4s ease forwards;
+        opacity: 0;
     }
-  </style>
+    .item:nth-child(1) { animation-delay: 0.05s; }
+    .item:nth-child(2) { animation-delay: 0.1s; }
+    .item:nth-child(3) { animation-delay: 0.15s; }
+    .item:nth-child(4) { animation-delay: 0.2s; }
+    @keyframes fadeIn {
+        to { opacity: 1; transform: translateY(0); }
+        from { opacity: 0; transform: translateY(10px); }
+    }
+    .item strong {
+        font-size: 1rem;
+        color: var(--text-color);
+    }
+    .code {
+        font-size: 0.9rem;
+        color: #555;
+        background: #f1f1f1;
+        padding: 3px 7px;
+        border-radius: 6px;
+        display: inline-block;
+        margin: 6px 0;
+    }
+    .price {
+        font-weight: 600;
+        color: var(--primary-color);
+        font-size: 1rem;
+        margin-top: auto;
+    }
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>Roblox (Via Login)</h1>
-  </header>
-  
-  <section class="section">
-    <h2>Daftar Robux</h2>
-    <div class="grid">
-        <div class="item"><div class="amount">80 Robux</div><div class="price">Rp 18.700</div></div>
-        <div class="item"><div class="amount">160 Robux</div><div class="price">Rp 34.100</div></div>
-        <div class="item"><div class="amount">240 Robux</div><div class="price">Rp 48.400</div></div>
-        <div class="item"><div class="amount">320 Robux</div><div class="price">Rp 62.700</div></div>
-        <div class="item"><div class="amount">400 Robux</div><div class="price">Rp 74.250</div></div>
-        <div class="item"><div class="amount">800 Robux</div><div class="price">Rp 143.000</div></div>
-        <div class="item"><div class="amount">1.200 Robux</div><div class="price">Rp 291.500</div></div>
-        <div class="item"><div class="amount">4.500 Robux</div><div class="price">Rp 715.000</div></div>
-        <div class="item"><div class="amount">10.000 Robux</div><div class="price">Rp 1.430.000</div></div>
-        <div class="item"><div class="amount">22.500 Robux</div><div class="price">Rp 2.805.000</div></div>
+<header>Roblox</header>
+
+<div class="container">
+    <h2>Roblox Via Login</h2>
+    <div class="product-list">
+        <div class="item">
+            <strong>80 Robux</strong>
+            <div class="code">Kode: rob80</div>
+            <div class="price">Rp 18.700</div>
+        </div>
+        <div class="item">
+            <strong>160 Robux</strong>
+            <div class="code">Kode: rob160</div>
+            <div class="price">Rp 34.100</div>
+        </div>
+        <div class="item">
+            <strong>240 Robux</strong>
+            <div class="code">Kode: rob240</div>
+            <div class="price">Rp 48.400</div>
+        </div>
+        <div class="item">
+            <strong>320 Robux</strong>
+            <div class="code">Kode: rob320</div>
+            <div class="price">Rp 64.100</div>
+        </div>
     </div>
-  </section>
 
-  <section class="section">
-    <h2>Catatan</h2>
-    <div class="terms-box">
-        <ul>
-            <li>Verifikasi 2 Langkah (V2L) wajib dimatikan untuk kelancaran proses.</li>
-            <li>Estimasi proses tergantung antrian yang sedang berjalan.</li>
-        </ul>
+    <h2>Roblox Gift Card</h2>
+    <div class="product-list">
+        <div class="item">
+            <strong>200 Robux</strong>
+            <div class="code">Kode: gift200</div>
+            <div class="price">Rp 45.000</div>
+        </div>
+        <div class="item">
+            <strong>400 Robux</strong>
+            <div class="code">Kode: gift400</div>
+            <div class="price">Rp 88.000</div>
+        </div>
+        <div class="item">
+            <strong>800 Robux</strong>
+            <div class="code">Kode: gift800</div>
+            <div class="price">Rp 170.000</div>
+        </div>
     </div>
-  </section>
-
-  <footer>
-    <strong>Klik pada item untuk memesan via WhatsApp.</strong><br/>
-    PlayPal Market &copy; 2025
-  </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const adminNumber = '6285877001999';
-      const items = document.querySelectorAll('.item');
-
-      // Fungsionalitas Klik WhatsApp
-      items.forEach(item => {
-        item.addEventListener('click', function () {
-          const amountEl = this.querySelector('.amount');
-          if (!amountEl) return;
-
-          const productName = amountEl.textContent.trim();
-          
-          const messageTemplate = `Login : (Google/FB/VK)\nEmail : \nPassword : \nPesanan Robux : ${productName}\n\nWajib Nonaktifkan V2L (Verifikasi 2 Langkah)`;
-          const encodedMessage = encodeURIComponent(messageTemplate);
-          const whatsappURL = `https://wa.me/${adminNumber}?text=${encodedMessage}`;
-
-          window.open(whatsappURL, '_blank');
-        });
-      });
-
-      // --- SCRIPT UNTUK ANIMASI OTOMATIS SAAT LOAD HALAMAN ---
-      // Memilih semua elemen yang ingin dianimasikan
-      const animatedElements = document.querySelectorAll('.item, .terms-box');
-
-      // Memberi sedikit jeda agar semua elemen siap sebelum animasi dimulai
-      setTimeout(() => {
-        animatedElements.forEach((el, index) => {
-          // Atur jeda untuk efek air terjun (stagger)
-          el.style.transitionDelay = `${index * 20}ms`; // jeda 20ms per elemen
-          // Tambahkan kelas untuk memicu animasi
-          el.classList.add('is-visible');
-        });
-      }, 100); // Mulai setelah 100ms
-    });
-  </script>
+</div>
 
 </body>
 </html>
-
-
